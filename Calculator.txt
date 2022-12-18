@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    
+    <script>
+        var a,b,c;
+        function calAdd(firstnumber,secondnumber)
+        {
+            a=parseInt(firstnumber);
+            b=parseInt(secondnumber);
+            
+            var ans=document.getElementById("answer");
+            ans.value=a+b;
+
+        }
+
+        function calSub(firstnumber,secondnumber)
+        {
+            a=parseInt(firstnumber);
+            b=parseInt(secondnumber);
+            var ans=document.getElementById("answer");
+            ans.value=a-b;
+            
+        }
+
+        function calMul(firstnumber,secondnumber)
+        {
+            a=parseInt(firstnumber);
+            b=parseInt(secondnumber);
+            var ans=document.getElementById("answer");
+            ans.value=a*b;
+        }
+
+        function calDiv(firstnumber,secondnumber)
+        {
+            a=parseInt(firstnumber);
+            b=parseInt(secondnumber);
+            var ans=document.getElementById("answer");
+            ans.value=a/b;
+        }
+     
+        </script>
+        <form>
+            <center>
+                <h1>Basic Calculator</h1>
+           <table border="4" id="table">
+            <tr>
+                <td>first number:</td>
+                <td><input  type="text" id="txtfirstnumber"/></td>
+                
+            </tr>
+            <tr id="second">
+                <td>Second Number: </td>
+            <td><input type="text" id="txtsecondnumber"/></td>
+            </tr>
+           
+            <tr >
+                <td><input type="button" value="Add" class="button" onclick="calAdd(txtfirstnumber.value,txtsecondnumber.value)"/>
+                <input type="button" value="Sub" class="button" onclick="calSub(txtfirstnumber.value,txtsecondnumber.value)"/>
+            </td>
+            <td>
+                <input type="button" value="Mul" class="button" onclick="calMul(txtfirstnumber.value,txtsecondnumber.value)"/>
+                <input type="button" value="Div" class="button" onclick="calDiv(txtfirstnumber.value,txtsecondnumber.value)"/>
+            </td>
+           
+            </tr>
+            <tr>
+                 <td>
+                    <input type="reset" value="reset"  id="resetbtn"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Answer:</td> 
+                <td><input type="text" id="answer"/></td>
+             </tr>
+ 
+            </center>
+           </table>
+
+
+        </form>
+
+
+
+        <style>
+         #action{
+           
+            justify-content: space-between;
+            color: white;
+
+         }
+         
+         #table{
+            background-color: aqua;
+            height: 25rem;
+            width: 20em;
+            font-size: 25px;
+            border-radius: 20px;
+            border-color: red;
+         }
+
+         #txtfirstnumber{
+            font-size: 20px;
+            padding: 0.5rem;
+
+         }
+         #txtsecondnumber{
+            font-size: 20px;
+            padding: 0.5rem;
+         }
+         #answer{
+            padding: 0.5rem;
+            font-size: 20px;
+         }
+
+         .button{
+            background-color: black;
+            font-size: 20px;
+            padding: 0.5rem;
+            padding-left: 1rem;
+            padding-right: 0.7rem;
+            margin-left: 2rem;
+            border-radius: 10px;
+            color: white;
+         }
+         #resetbtn{
+            background-color: black;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+            padding-top:0.3rem;
+            padding-bottom: 0.3rem;
+            font-size: 25px;
+            margin-left: 2rem;
+            border-radius: 10px;
+            color: white;
+         }
+        </style>
+</body>
+</html>
